@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/* CSS Document */
+/*Testing Elements*/
+#para {
+	background: white;
+	padding: .5em;
+}
+
+.column {
+	float: left;
+	width: 2em;
+	padding: .5em;
+}
+/*General tag formatting*/
+* {
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+header {
+	background-color: #E1D2EE;
+}
+
+header h1 {
+	margin: 0 0 .5em 1em;
+	padding-top: .5em;
+}
+
+footer {
+	float: right;
+	margin: .5em;
+}
+
+h1, h2 {
+	color: #43225E;
+}
+
+hr {
+	border-top: solid .2em #43225E;
+	margin-bottom: 2em;
+	width: 40%;
+}
+
+p {
+	color: #3F029D;
+	margin: .5em;
+	line-height: 1.3em;
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/*This disguises a link as a button*/
+.button {
+	background-color: #43225E;
+	padding: .5em;
+	margin: .7em;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.button:hover {
+	background-color: #A29061;
+}
+
+/*nav bar*/
+.horizontal {
+	list-style-type: none;
+	background-color: #43225E;
+	padding: .5em;
+}
+
+.horizontal li {
+	display: inline;
+	padding: .5em;
+	margin: 0;
+}
+
+.horizontal li a {
+	padding: .5em;
+	margin: 0;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.horizontal li a:hover {
+	background-color: #A29061;
+}
+
+/*The active class will hight what page you are on.*/
+.active {
+	background-color: #E1D2EE;
+	color: #43225E !important;
+}
+
+/*layout related elements*/
+.spacing {
+	margin: 2em;
+}
+
+.spacing p {
+	margin-left: 1em;
+}
+
+.centers {
+	display: flex;
+	justify-content: center;
+}
+
+/*showcase elements*/
+.showcase tr {
+	color: #3F029D;
+}
+
+th {
+	color: #43225E;
+	font-size: 1.2em;
+}
+
+.title_cell {
+	width: 25%;
+	padding-left: 1em !important;
+}
+
+.description {
+	padding: .5em .2em !important;
+}
+
+.showcase {
+	margin: 0 1em 0 1em;
+	background-color: #E1D2EE;
+	padding: 1em;
+	max-width: 40em;
+}
+
+.showcase hr {
+	border-top: solid .2em #43225E;
+	margin: .5em 0;
+	width: 100%;
+}
+
+.showcase img {
+	max-height: 15em;
+}
+
+/*About page*/
+#me {
+	display: table;
+	margin: 0 0 2em 6em;
+	width: 80%;
+	min-width: 45em;
+}
+#me img {
+    display:table-cell;
+}
+
+#me p {
+	display:table-cell;
+	vertical-align: middle;
+}
+
+/*Assignment Page*/
+#assigns {
+	width: 70%;
+	min-width: 50em;
+	color: #3F029D;
+}
+
+#assigns th {
+	text-align: left;
+}
+
+#assigns td {
+	padding: .5em 0;
+	margin: 1em;
+	border-top: solid #43225E;
+	border-bottom: solid #43225E;
+}
+
+#assigns a {
+	color: #3F029D;
+}

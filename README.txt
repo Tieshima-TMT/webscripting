@@ -1,0 +1,1 @@
+This is simply a collection of examples for the web scripting class. By uploading it to GitHub I'm also showing the CMS class how to showcase coding.

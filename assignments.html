@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Silvia Workspace</title>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+<header><!--nav bar START-->
+	<h1>H Silvia's Workspace</h1>
+	<ul class="horizontal">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a class="active" href="Assignments.html">Assignments</a></li><!--This page is active-->
+	</ul>
+</header><!--nav bar END-->
+<body>
+	<div class="spacing">
+	<table id="assigns">
+		<th>Assignment</th>
+		<th>Description</th>
+		<th>Date</th>
+		<tr>
+			<td class="title_cell"><a href="M00 Test/index.html">M00 Test</a></td>
+			<td class="description">This is used to test code.</td>
+			<td class="title_cell">03/27/2022</td>
+		</tr>
+		<tr>
+			<td class="title_cell"><a id="m01_title" href="index.html"></a></td><!--Use javascript to place repeated info-->
+			<td class="description" id="m01_desc"></td><!--Use javascript to place repeated info-->
+			<td class="title_cell">03/27/2022</td>
+		</tr>
+		<tr>
+			<td class="title_cell"><a id="m02_title" href="M02 Loops/index.html"></a></td><!--Use javascript to place repeated info-->
+			<td class="description" id="m02_desc"></td><!--Use javascript to place repeated info-->
+			<td class="title_cell">03/27/2022</td>
+		</tr>
+		<tr>
+			<td class="title_cell"><a id="m05_title" href="M05 Arrays/index.html"></a></td><!--Use javascript to place repeated info-->
+			<td class="description" id="m05_desc"></td><!--Use javascript to place repeated info-->
+			<td class="title_cell">04/29/2022</td>
+		</tr>
+	</table>
+	</div>
+</body>
+<footer>
+	<p id="footer_info"></p><!--Use javascript to place repeated info-->
+	<script src="scripts/wrkspc.js"></script><!--Run js doc once page is loaded-->
+</footer>
+</html>

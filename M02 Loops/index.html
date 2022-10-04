@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Silvia_Loops</title>
+<link href="../main.css" rel="stylesheet" type="text/css">
+</head>
+<header><!--condensed nav bar START-->
+	<h1>H Silvia's Workspace</h1>
+	<ul class="horizontal">
+		<li><a class="active" href="../Assignments.html">&#60;&#60; Return</a></li><!--This page is active-->
+	</ul>
+</header><!--nav bar END-->
+<body>
+	<div class="spacing">
+	<h1>M2 Assignment: Using Loops &#38; If Statements</h1>
+		<p>This assignment demonstrates how to use different loops and conditional statements. It will use strings, expressions, and manipulated numeric values.</p>
+		<p>
+		I use a prompt window to let the user pick the value for x and y. In this case, you chose 
+		<script> //Continue paragraph with information from js
+		//Get input for x, if x is not a number(isNan) then it will prompt again.
+		var x = window.prompt("Enter a value for x: ");
+			if(isNaN(x)) {
+				x = window.prompt("You did not enter a valid value. Please enter a number for x: ")
+			}
+			
+		//Get input for y, if y is not a number(isNan) then it will prompt again.
+		var y = window.prompt("Enter a value for y: ");
+			if(isNaN(y)) {
+				y = window.prompt("You did not enter a valid value. Please enter a number for y: ")
+			}
+		
+		//Make sure they are positive numbers
+		x = Math.abs(x);
+		y = Math.abs(y);
+		
+		//Output values of variables into paragraph
+		document.write("a value of <b>" + x + " for x</b> ");
+		document.write("and a value of <b>" + y + " for y</b>. ");
+		</script><!--End script and continue with paragraph-->
+		You can set the value for x and y like I do or set it in the code itself like Output.html did.
+		</p>
+		<br>
+	<h2>If Statement</h2>
+		<p>This if statement compares x and y to decide which one is greater than the other.</p>
+		<p>
+		<script>
+		//Check which value is greater than the other. The third option is for if x and y are equal.
+		if (x < y) {
+			document.write("The value of y, " + y +", is greater than the value of x, " + x +".");
+		} else if (x > y) {
+			document.write("The value of x, " + x + ", is greater than the value of y, " + y + ".");
+		} else {
+			document.write("The value of x and y are both " + x + ". This means they are equal.");
+		}
+		</script>
+		</p>
+		<br>
+		<h2>While Loop</h2>
+		<p>
+			This while loop will count down from x as long as it is no greater than 100. In that case it will only count down from 100. If x is 0 then it will count down from 100.
+			<br>
+			<br>
+			<script>
+				//Make sure x is not too large(over 100) or too small(0 or under). If x doesn't meet those conditions just set x_while to x
+				//x is assigned to x_while so x_while can be manipulated but x will remain preserved for other expressions.
+				x = Math.abs(x);
+				if (x > 100) {
+					x_while = 100;
+				} else if (x <= 0) {
+					x_while = 100;
+				} else {
+					x_while = x;
+				}
+				
+				//while x_while is greater than 0 run the loop.
+				while (x_while >= 0 ) {
+					document.write(x_while + " "); //This will display the value of x_while plus a space.
+					x_while--; //subtract 1
+				}
+			</script>
+		</p>
+		<br>
+		
+		<h2>Do While Loop</h2>
+		<p>
+		<script>
+			//This section counts from the smaller number up to the larger number.
+			var diff = Math.abs(x-y); //This checks the difference between the two numbers to make sure we're not counting through too many.
+			
+			if (diff > 50) { //If there are more than 50 numbers between x & y we will count from 0 to 50 instead.
+				var top_n = 50;
+				var bott = 0;
+				document.write("There are a lot of numbers between " + x + " and " + y + " so we're just going to count from 0 to 50.<br><br>");
+			} else { //If the difference is less than or equal to 50 then we run the following conditional statements.
+				if (x > y) { //If x is greater than y, x is set as the top number and y is set as the bottom number.
+					var top_n = x;
+					var bott = y;
+					document.write("The Do While loop will count up from y to x.<br><br>");
+				} else if (y > x) { //If y is greater than x, y is set as the top number and x is set as the bottom number.
+					var top_n = y;
+					var bott = x;
+					document.write("The Do While loop will count up from x to y.<br><br>");
+				} else { //If x and y are equal we'll just count 0 to 50.
+					var top_n = 50;
+					var bott = 0;
+					document.write("Since x and y are equal the Do While loop will count up from 0 to 50.<br><br>");
+				}
+			}
+			
+			do {
+				document.write(bott + " "); //This writes the number plus a space.
+				bott++; //Add one
+			} while (bott <= top_n) //Stop the loop is the bottom number exceeds the top number.
+		</script>
+		</p>
+		<br>
+		
+		<h2>For Loop</h2>
+		<p>
+		<script>
+			
+			var z = Math.abs(x-y); //Find the difference between x & y and make sure it is positive.
+			
+			//Write the result of x-y.
+			document.write("The difference of x and y is " + z + ". ");
+			
+			if (z > 100) { //If the difference is greater than 100, set it to 100 and run the loop.
+				document.write("The difference between x and y, " + z + ", is larger than 100 so the count will go down from 100 instead.<br><br>");
+				z = 100;
+			} else if (z <= 100 & z > 0) { //If the difference is less than or equal to 100 and it is greater than zero display he message and don't changee z.
+				document.write("The loop will now count down from " + z + ".<br><br>");
+			} else { //If the difference is 0 loop through 10 to 0.
+				document.write("Since the difference is 0 the loop will count down from 10. <br>");
+				z = 10;
+			}
+			
+			//Set the counter, i, to 0, as long as the counter is less than or equal to z run the loop. With each iteration add one to i.
+			for (i=0; i <= z; i++) {
+				document.write(z-i + " ");
+			}
+		</script>
+		</p>
+	</div>
+</body>
+</html>
